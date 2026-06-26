@@ -31,7 +31,7 @@
 
     /* Layout */
     --max-width: 1200px;
-    --header-height: 100px;
+    --header-height: 80px;
 
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -153,31 +153,11 @@ p:last-child {
 
 /* Logo */
 .logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    line-height: 1;
-}
-
-.logo-image {
-    display: block;
-    height: 80px;
-    width: auto;
-    max-width: 280px;
-    object-fit: contain;
-}
-
-@media (max-width: 767px) {
-    .logo-image {
-        height: 64px;
-        max-width: 220px;
-    }
-}
-
-.logo-fallback {
-    display: none;
+    display: flex;
     flex-direction: column;
     font-family: var(--font-display);
+    text-decoration: none;
+    line-height: 1;
 }
 
 .logo-the {
@@ -530,7 +510,7 @@ p:last-child {
    -------------------------------------------------------------------------- */
 @media (min-width: 1280px) {
     :root {
-        --header-height: 120px;
+        --header-height: 100px;
     }
 
     h1 {
