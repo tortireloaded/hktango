@@ -1,0 +1,80 @@
+{
+  "project": "hk-tango-org-website",
+  "type": "static-website",
+  "status": "v1-spec-ready",
+  "created": "2026-06-26",
+  "owner": "DS",
+  "org": {
+    "legal_name": "Hong Kong Argentine Tango Cultural Association",
+    "marketing_name": "HK Tango",
+    "type": "hong-kong-non-profit",
+    "positioning": "curated cultural body alongside the milonga community"
+  },
+  "site": {
+    "scope": "single-landing-page",
+    "language": "english",
+    "stack": ["html5", "css3", "vanilla-js", "google-fonts"],
+    "hosting": "cloudflare-pages",
+    "fonts": ["Playfair Display", "Inter"],
+    "palette": {
+      "primary": "#000000",
+      "background": "#FFFFFF",
+      "off_white": "#FAFAF7",
+      "accent": "#5C1A1B",
+      "body_text": "#1A1A1A",
+      "secondary_text": "#666666"
+    },
+    "contact": {
+      "email": "torti.reloaded@gmail.com",
+      "instagram": "hktango.hk"
+    }
+  },
+  "sections": [
+    "hero (logo + tagline)",
+    "mission (3 paragraphs)",
+    "what-we-do (4 cards: milongas, classes, cultural events, community)",
+    "gallery (6 placeholders)",
+    "contact (email + instagram)",
+    "footer (org name + reg placeholder + copyright)"
+  ],
+  "files": [
+    "PRD.md",
+    "summary.md",
+    "items.json",
+    "index.html",
+    "style.css",
+    "script.js",
+    "README.md",
+    ".gitignore",
+    "assets/logo-original.jpg"
+  ],
+  "acceptance_criteria": [
+    "responsive 375/768/1280",
+    "no console errors",
+    "no external deps beyond google fonts",
+    "loads <1s",
+    "all 6 sections render",
+    "contact links work",
+    "6 gallery placeholders with TODO comments",
+    "README has cloudflare pages deploy steps"
+  ],
+  "open_items": [
+    "custom-domain",
+    "real-photos",
+    "mission-copy-final",
+    "tagline-final",
+    "email-capture-mvp",
+    "event-listings",
+    "multi-language",
+    "donations",
+    "favicon"
+  ],
+  "next_actions": [
+    "spawn-subagent-to-build",
+    "review-output",
+    "ds-approves",
+    "create-github-repo",
+    "push",
+    "cloudflare-pages-setup"
+  ]
+}

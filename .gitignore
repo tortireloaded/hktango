@@ -1,0 +1,24 @@
+# HK Tango Website — Git Ignore
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Local environment
+.env
+.env.local
+
+# Cloudflare
+.vercel
+.netlify
+
+# Misc
+*.log
