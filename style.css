@@ -31,7 +31,7 @@
 
     /* Layout */
     --max-width: 1200px;
-    --header-height: 80px;
+    --header-height: 100px;
 
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -161,16 +161,16 @@ p:last-child {
 
 .logo-image {
     display: block;
-    height: 56px;
+    height: 80px;
     width: auto;
-    max-width: 220px;
+    max-width: 280px;
     object-fit: contain;
 }
 
 @media (max-width: 767px) {
     .logo-image {
-        height: 48px;
-        max-width: 180px;
+        height: 64px;
+        max-width: 220px;
     }
 }
 
@@ -530,7 +530,7 @@ p:last-child {
    -------------------------------------------------------------------------- */
 @media (min-width: 1280px) {
     :root {
-        --header-height: 100px;
+        --header-height: 120px;
     }
 
     h1 {
