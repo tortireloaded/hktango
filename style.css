@@ -153,11 +153,31 @@ p:last-child {
 
 /* Logo */
 .logo {
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-display);
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
     line-height: 1;
+}
+
+.logo-image {
+    display: block;
+    height: 56px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    .logo-image {
+        height: 48px;
+        max-width: 180px;
+    }
+}
+
+.logo-fallback {
+    display: none;
+    flex-direction: column;
+    font-family: var(--font-display);
 }
 
 .logo-the {
