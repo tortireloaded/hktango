@@ -31,7 +31,7 @@
 
     /* Layout */
     --max-width: 1200px;
-    --header-height: 88px;
+    --header-height: 96px;
 
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -161,9 +161,9 @@ p:last-child {
 
 .logo-image {
     display: block;
-    height: 56px;
+    height: 72px;
     width: auto;
-    max-width: 220px;
+    max-width: 280px;
 }
 
 /* Navigation Toggle (Mobile) */
@@ -473,8 +473,8 @@ p:last-child {
     }
 
     .logo-image {
-        height: 72px;
-        max-width: 240px;
+        height: 92px;
+        max-width: 300px;
     }
 
     .cards-grid {
@@ -495,7 +495,7 @@ p:last-child {
    -------------------------------------------------------------------------- */
 @media (min-width: 1280px) {
     :root {
-        --header-height: 116px;
+        --header-height: 128px;
     }
 
     h1 {
@@ -507,8 +507,8 @@ p:last-child {
     }
 
     .logo-image {
-        height: 80px;
-        max-width: 260px;
+        height: 104px;
+        max-width: 320px;
     }
 
     .hero {
