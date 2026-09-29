@@ -17,31 +17,30 @@ To preview the site locally:
 
 ## Deploy to Cloudflare Pages
 
-Follow these steps to deploy your site:
+Follow these steps to deploy your site.
 
-### Step 1: Create a GitHub Repository
+> **Note:** this is already a git repository connected to
+> `https://github.com/tortireloaded/hktango.git` on branch `main`. You do not
+> need to run `git init` or add a remote — just push your commits and connect
+> the existing repo to Cloudflare Pages.
 
-1. Go to https://github.com/new
-2. Repository name: `hk-tango-website` (or your preferred name)
-3. Select **Public** or **Private**
-4. Click **Create repository**
+### Step 1: (Done) GitHub Repository
+
+The repo already exists at **github.com/tortireloaded/hktango**. Skip this step.
 
 ### Step 2: Push Your Code
 
-Open a terminal in the project folder and run:
+The project now lives in the OpenMausBot workspace. From there:
 
 ```bash
-cd /home/torti/clawd/life/projects/hk-tango-org-website/
+cd /home/torti/.openmausbot/workspaces/780622ae-d89f-4359-a742-881d40daeaf5/hk-tango-org-website/
 
-git init
 git add .
-git commit -m "v1 landing page"
-
-# Replace <your-username> and <your-repo-name> with your actual GitHub details
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-git branch -M main
-git push -u origin main
+git commit -m "describe your change"
+git push origin main
 ```
+
+Cloudflare Pages will pick up the push automatically once connected.
 
 ### Step 3: Connect to Cloudflare Pages
 
@@ -81,10 +80,16 @@ hk-tango-org-website/
 ├── style.css        # All styles
 ├── script.js        # Mobile navigation
 ├── assets/
-│   └── logo-original.jpg  # Logo reference (do not embed)
+│   ├── hktango-logo.svg   # Live wordmark (used in header)
+│   ├── hktango-logo.jpg   # Raster fallback, apple-touch-icon
+│   ├── favicon.svg        # Browser tab icon
+│   ├── logo-original.jpg  # Original logo (reference only)
+│   └── logo-v2.jpg        # Earlier logo variant (reference only)
 ├── README.md        # This file
 ├── .gitignore
-└── PRD.md          # Project specification
+├── PRD.md           # Project specification
+├── summary.md       # Project summary + review log
+└── items.json       # Project tracking state
 ```
 
 ## Adding Real Photos

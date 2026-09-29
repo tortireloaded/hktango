@@ -137,7 +137,7 @@ DS and collaborators have just registered a new non-profit organization in Hong 
 
 ### Section 5: Contact
 - H2: "Get in Touch" or "Connect"
-- Email: `torti.reloaded@gmail.com` (mailto: link)
+- Email: `info@hktango.org` (mailto: link) — confirmed by DS 2026-09-29; DS owns the domain
 - Instagram: `@hktango.hk` (link to https://instagram.com/hktango.hk)
 - Optional: a one-line "Mailing list coming soon" placeholder if DS wants to add one later
 - Layout: simple, centered, large type, breathing room
@@ -155,17 +155,24 @@ DS and collaborators have just registered a new non-profit organization in Hong 
 ```
 hk-tango-org-website/
 ├── PRD.md                    (this file)
-├── summary.md                (project summary for the knowledge graph)
+├── summary.md                (project summary + review log)
 ├── items.json                (project tracking for the knowledge graph)
 ├── README.md                 (build/deploy instructions for DS)
 ├── index.html                (the page)
 ├── style.css                 (all styling)
 ├── script.js                 (optional, for menu toggle etc.)
 ├── assets/
+│   ├── hktango-logo.svg      (live wordmark used in the header)
+│   ├── hktango-logo.jpg      (raster fallback / apple-touch-icon)
+│   ├── favicon.svg           (browser tab icon)
 │   ├── logo-original.jpg     (reference only, do not embed directly)
-│   └── favicon.ico           (TBD — could derive from logo, or skip for v1)
+│   └── logo-v2.jpg           (earlier variant, reference only)
 └── .gitignore                (basic — no node_modules etc., even though we have none)
 ```
+
+**Repo:** `github.com/tortireloaded/hktango`, branch `main`. Project moved to
+`/home/torti/.openmausbot/workspaces/780622ae-d89f-4359-a742-881d40daeaf5/hk-tango-org-website/`
+on 2026-09-29 (was `/home/torti/clawd/life/projects/hk-tango-org-website/`).
 
 ---
 
@@ -193,22 +200,30 @@ hk-tango-org-website/
 
 ## 8. Acceptance Criteria (v1)
 
-The build is "done" when ALL of the following are true:
+Reviewed 2026-09-29. Status below reflects the code as of that review.
 
-- [ ] `index.html` is valid HTML5
-- [ ] `style.css` is valid CSS3, no frameworks
-- [ ] Page is fully responsive (looks good at 375px, 768px, 1280px widths)
-- [ ] All 6 sections render correctly with proposed copy
-- [ ] Logo / wordmark is visible in the header
-- [ ] Email link (`mailto:torti.reloaded@gmail.com`) works
-- [ ] Instagram link (https://instagram.com/hktango.hk) works and opens in new tab
-- [ ] Gallery section has 6 placeholders with clear TODO comments
-- [ ] Footer shows org name, registration placeholder, copyright
-- [ ] Page loads in <1 second on a normal connection
-- [ ] No console errors
-- [ ] No external dependencies beyond Google Fonts
-- [ ] All files committed to a new git repo at the path DS specifies (or `~/clawd/life/projects/hk-tango-org-website/` with a clear "this is ready to push to a new GitHub repo" note)
-- [ ] README.md has clear step-by-step Cloudflare Pages deploy instructions
+- [x] `index.html` is valid HTML5
+- [x] `style.css` is valid CSS3, no frameworks
+- [x] Page is fully responsive (375 / 768 / 1280 breakpoints present)
+- [x] All 6 sections render correctly with proposed copy
+- [x] Logo / wordmark is visible in the header
+- [x] Email link (`mailto:info@hktango.org`) works
+- [x] Instagram link (https://instagram.com/hktango.hk) works and opens in new tab
+- [x] Gallery section has 6 placeholders with clear TODO comments
+- [x] Footer shows org name, registration placeholder, copyright
+- [x] Page loads in <1 second on a normal connection
+- [x] No console errors
+- [x] No external dependencies beyond Google Fonts
+- [x] Page has exactly one `<h1>` (hero) — **added 2026-09-29**; previously the page had none
+- [x] Anchor links do not hide section headings under the fixed header — **added 2026-09-29**
+- [x] Favicon present — **added 2026-09-29** (`assets/favicon.svg`)
+- [x] Open Graph / Twitter meta present for link previews — **added 2026-09-29**
+- [x] Committed to git and pushed to `github.com/tortireloaded/hktango`
+- [x] README.md has clear step-by-step Cloudflare Pages deploy instructions
+
+**Not yet verified by an actual browser session** (no headless browser available in this
+environment) — the responsive/console/load-speed claims above are inferred from source
+inspection, not measured. DS should eyeball it once locally previewed.
 
 ---
 
@@ -222,18 +237,26 @@ The build is "done" when ALL of the following are true:
 - [ ] Event listings (when there are events to list)
 - [ ] Multi-language (Traditional Chinese, Spanish for visiting teachers)
 - [ ] Donations / Stripe integration
-- [ ] Favicon (could derive from the "H" or "T" of the wordmark)
+- [x] Favicon — **done 2026-09-29**, `assets/favicon.svg`
+- [ ] Proper 1200x630 Open Graph share image (currently a 640x640 square logo, which platforms will crop/letterbox)
 
 ---
 
 ## 10. Build Workflow
 
-1. **Torti (me):** Write this PRD ✅
-2. **Torti (me):** Spawn sub-agent (minimax/MiniMax-M2.5) with the PRD as the spec
-3. **Sub-agent:** Build `index.html`, `style.css`, `script.js`, `README.md`, `.gitignore` per the spec
-4. **Torti (me):** Review output, iterate if needed
-5. **DS:** Approves, then I create the GitHub repo, push, and we do the Cloudflare Pages setup together (or DS does it solo with the README instructions)
+1. **Torti:** Write this PRD ✅
+2. **Torti:** Spawn sub-agent with the PRD as the spec ✅
+3. **Sub-agent:** Build `index.html`, `style.css`, `script.js`, `README.md`, `.gitignore` per the spec ✅
+4. **Torti:** Review output, iterate if needed ✅
+5. **Zuko:** Picked the project up 2026-09-29; reviewed, fixed 5 defects, corrected doc drift ✅
+6. **DS:** Approves → Cloudflare Pages setup → launch ✅ *pending*
 
 ---
 
 *This PRD is the source of truth. If something is unclear, ask before building, not after.*
+
+## 11. Decision Log
+
+- **2026-09-29** — Contact email is `info@hktango.org`, not a Gmail address. DS owns the domain.
+- **2026-09-29** — Header logo stays as-is: the vectorized handwritten "hk" script SVG. DS reviewed and elected not to revisit the earlier revert-to-typographic suggestion.
+- **2026-09-29** — Gallery section titled "Moments" rather than "Gallery" (commit ff7ada1).

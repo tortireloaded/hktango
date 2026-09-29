@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HK Tango">
+  <rect width="64" height="64" fill="#000000"/>
+  <g fill="#FFFFFF">
+    <rect x="15" y="12" width="8" height="40"/>
+    <rect x="41" y="12" width="8" height="40"/>
+    <rect x="15" y="28" width="34" height="8"/>
+    <rect x="11" y="10" width="16" height="3"/>
+    <rect x="37" y="10" width="16" height="3"/>
+    <rect x="11" y="51" width="16" height="3"/>
+    <rect x="37" y="51" width="16" height="3"/>
+  </g>
+</svg>

@@ -1,7 +1,7 @@
 {
   "project": "hk-tango-org-website",
   "type": "static-website",
-  "status": "v1-spec-ready",
+  "status": "v1-built-reviewed-pending-launch",
   "created": "2026-06-26",
   "owner": "DS",
   "org": {
@@ -25,7 +25,7 @@
       "secondary_text": "#666666"
     },
     "contact": {
-      "email": "torti.reloaded@gmail.com",
+      "email": "info@hktango.org",
       "instagram": "hktango.hk"
     }
   },
@@ -46,8 +46,19 @@
     "script.js",
     "README.md",
     ".gitignore",
-    "assets/logo-original.jpg"
+    "assets/logo-original.jpg",
+    "assets/logo-v2.jpg",
+    "assets/hktango-logo.jpg",
+    "assets/hktango-logo.svg",
+    "assets/favicon.svg"
   ],
+  "repo": {
+    "host": "github.com/tortireloaded/hktango",
+    "branch": "main",
+    "local_path": "/home/torti/.openmausbot/workspaces/780622ae-d89f-4359-a742-881d40daeaf5/hk-tango-org-website",
+    "moved_from": "/home/torti/clawd/life/projects/hk-tango-org-website",
+    "moved_on": "2026-09-29"
+  },
   "acceptance_criteria": [
     "responsive 375/768/1280",
     "no console errors",
@@ -61,20 +72,37 @@
   "open_items": [
     "custom-domain",
     "real-photos",
+    "proper-og-share-image-1200x630",
     "mission-copy-final",
     "tagline-final",
     "email-capture-mvp",
     "event-listings",
     "multi-language",
-    "donations",
-    "favicon"
+    "donations"
+  ],
+  "review_log": [
+    {
+      "date": "2026-09-29",
+      "by": "zuko",
+      "action": "review + fix pass",
+      "fixed": [
+        "added missing <h1> (hero was a <p>; page had no document heading)",
+        "added scroll-margin-top so fixed header no longer covers section headings on nav click",
+        "added assets/favicon.svg + <link rel=icon>",
+        "added Open Graph / Twitter meta tags",
+        "scaled hero type to PRD spec (40-48px mobile / 64-96px desktop)"
+      ],
+      "left_alone_by_ds": [
+        "header logo (vectorized handwritten hk script SVG)",
+        "contact email info@hktango.org (DS owns the domain)"
+      ]
+    }
   ],
   "next_actions": [
-    "spawn-subagent-to-build",
-    "review-output",
-    "ds-approves",
-    "create-github-repo",
-    "push",
-    "cloudflare-pages-setup"
+    "ds-review-and-approve",
+    "cloudflare-pages-setup",
+    "launch-on-pages-dev",
+    "point-custom-domain-at-cloudflare",
+    "swap-gallery-placeholders-for-real-photos"
   ]
 }
